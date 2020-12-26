@@ -1,8 +1,13 @@
-package com.whut.zodiac.ox.core.model.entity.persistence;
+package com.whut.zodiac.ox.core.flux.model.entity.persistence;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class ParamMappingConfig {
 
     // 配置ID
+    @Id
     private String id;
 
     // 接口集成配置ID

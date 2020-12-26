@@ -1,4 +1,4 @@
-package com.whut.zodiac.ox.core.model.entity.persistence;
+package com.whut.zodiac.ox.core.flux.model.entity.persistence;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

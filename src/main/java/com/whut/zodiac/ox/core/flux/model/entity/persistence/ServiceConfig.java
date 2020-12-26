@@ -1,8 +1,13 @@
-package com.whut.zodiac.ox.core.model.entity.persistence;
+package com.whut.zodiac.ox.core.flux.model.entity.persistence;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class ServiceConfig {
 
     // 服务编码
+    @Id
     private String serviceCode;
 
     // 交互模板ID

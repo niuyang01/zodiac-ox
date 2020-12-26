@@ -1,8 +1,13 @@
-package com.whut.zodiac.ox.core.model.entity.persistence;
+package com.whut.zodiac.ox.core.flux.model.entity.persistence;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class InteractionConfig {
 
     // 交互配置id
+    @Id
     private String id;
 
     // 交互配置模板

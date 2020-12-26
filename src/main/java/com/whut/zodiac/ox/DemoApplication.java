@@ -1,7 +1,7 @@
 package com.whut.zodiac.ox;
 
-import com.whut.zodiac.ox.core.model.entity.persistence.IntegrationContract;
-import com.whut.zodiac.ox.core.model.repository.persistence.IntegrationContractRepository;
+import com.whut.zodiac.ox.core.flux.model.mock.ConfigMetaDataMock;
+import com.whut.zodiac.ox.core.flux.model.repository.persistence.IntegrationContractRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -23,19 +23,9 @@ public class DemoApplication {
 
         return (args) -> {
 
-            IntegrationContract integrationContract = new IntegrationContract();
-            integrationContract.setContractId("GET_HUGE_GOODS_INDO_LIST_CONTRACT_0001");
-            integrationContract.setServiceCode("ACTIVITY_SHOW_GET_HUGE_GOODS_INDO_LIST");
-            integrationContract.setSource("activity_show");
-
-            integrationContractRepository.save(integrationContract);
-
-            log.info("IntegrationContracts found with findAll():");
-            log.info("-------------------------------");
-            integrationContractRepository.findAll().forEach(e -> {
-                log.info(e.toString());
-            });
-            log.info("");
+            ConfigMetaDataMock configMetaDataMock = new ConfigMetaDataMock();
+            configMetaDataMock.setIntegrationContractRepository(integrationContractRepository);
+            configMetaDataMock.init();
 
         };
     }
